@@ -176,20 +176,19 @@
               // reduce price variable
               price = price - option.price;
             }
-            if(optionImage) {
-              if (optionSelected) {
-                optionImage.classList.add(classNames.menuProduct.imageVisible);
-              } else {
-                optionImage.classList.remove(classNames.menuProduct.imageVisible);
-              }
-            }
           } 
+          if(optionImage) {
+            if (optionSelected) {
+              optionImage.classList.add(classNames.menuProduct.imageVisible);
+            } else {
+              optionImage.classList.remove(classNames.menuProduct.imageVisible);
+            }
+          }
         }
       }  
       // update calculated price in the HTML
       thisProduct.priceElem.innerHTML = price; 
     }
- 
   }
 
   const app = {
