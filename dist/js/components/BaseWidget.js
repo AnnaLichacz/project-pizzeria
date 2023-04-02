@@ -22,12 +22,12 @@ class BaseWidget{
     
     /* TODO: add validation */
     if(thisWidget.correctValue !== newValue && thisWidget.isValid(newValue)){
-      thisWidget.correctValue = newValue;
+      thisWidget.correctValue = newValue;    
     }
     
-    thisWidget.renderValue();
+    thisWidget.renderValue(); 
     thisWidget.announce();
-          
+      
   }
 
   setValue(value){
