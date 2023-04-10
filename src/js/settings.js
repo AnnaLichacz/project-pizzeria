@@ -3,12 +3,14 @@ export const select = {
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product', // CODE ADDED
     bookingWidget: '#template-booking-widget',
+    homePage: '#template-home',
   },
   containerOf: {
     menu: '#product-list',
     cart: '#cart',
     pages: '#pages',
     booking: '.booking-wrapper',
+    homePage: '.home-wrapper'
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -43,6 +45,12 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    tablesSelect: '.floor-plan',
+    starters: '[name="starter"]',
+    phone: '.order-confirmation [name="phone"]',
+    address: '.order-confirmation [name="address"]',
+    tableSelected: '.table.selected',
+    form: '.booking-form',
   },
   nav: {
     links: '.main-nav a',
@@ -68,6 +76,10 @@ export const select = {
     remove: '[href="#remove"]',
   },
   // CODE ADDED END
+  home : {
+    links: '.link-btn',
+    carousel: '.main-carousel',
+  }
 };
 
 export const classNames = {
@@ -81,8 +93,10 @@ export const classNames = {
   },
   // CODE ADDED END
   booking: {
+    table: 'table',
     loading: 'loading',
     tableBooked: 'booked',
+    tableSelected: 'selected',
   },
   nav: {
     active: 'active',
@@ -117,8 +131,8 @@ export const settings = {
     url: '//localhost:3131',
     products: 'products',
     orders: 'orders',
-    booking: 'booking',
-    event: 'event',
+    bookings: 'bookings',
+    events: 'events',
     dateStartParamKey: 'date_gte',
     dateEndParamKey: 'date_lte',
     notRepeatParam: 'repeat=false',
@@ -132,4 +146,5 @@ export const templates = {
   cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
   // CODE ADDED END
   bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
+  homePage: Handlebars.compile(document.querySelector(select.templateOf.homePage).innerHTML),
 };

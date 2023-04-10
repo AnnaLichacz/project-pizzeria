@@ -12,8 +12,6 @@ class Booking{
     thisBooking.render(element);
     thisBooking.initWidgets();
     thisBooking.getData();
-    thisBooking.sendBooking();
-    thisBooking.selected = {};
     
   }
 
@@ -197,13 +195,18 @@ class Booking{
 
     thisBooking.dom.wrapper.addEventListener('updated', function(){
       thisBooking.updateDOM();
-    });  
-
-    thisBooking.dom.tablesSelect.addEventListener('click', function(event){
-      thisBooking.initTables(event);
+      const selectedTable = thisBooking.dom.tablesSelect.querySelector(select.booking.tableSelected);
+      if(selectedTable)
+        selectedTable.classList.remove(classNames.booking.tableSelected);
     });
 
-    thisBooking.dom.submit.addEventListener('submit', function(event) {
+    thisBooking.dom.tablesSelect.addEventListener('click', function(event){
+      if (event.target.classList.contains(classNames.booking.table)) {
+        thisBooking.initTables(event.target);
+      }
+    });
+
+    thisBooking.dom.form.addEventListener('submit', function(event) {
       event.preventDefault();
       thisBooking.sendBooking();
     });
@@ -268,8 +271,8 @@ class Booking{
       .then(function(response){
         return response.json();
       })
-      .then(function(booking) {
-        console.log('booking: ', booking);
+      .then(function(parsedResponse) {
+        console.log('parsedResponse', parsedResponse);
         thisBooking.makeBooked(payload.date, payload.hour, payload.duration, payload.table);
         alert('Table booked successfully!');
       });
