@@ -202,7 +202,27 @@
       }
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "address": "",
+      "phone": "",
+      "totalPrice": 65,
+      "subtotalPrice": 45,
+      "totalNumber": 1,
+      "deliveryFee": 20,
+      "products": [
+        {
+          "id": "cake",
+          "amount": 1,
+          "price": 45,
+          "priceSingle": 45,
+          "name": "Zio Stefano's Doughnut",
+          "params": {}
+        }
+      ],
+      "id": 1
+    }
+  ],
   "events": [
     {
       "id": 1,
@@ -263,20 +283,5 @@
       ]
     }
   ],
-  "bookings": [
-    {
-      "date": "2023-04-19",
-      "hour": "12:00",
-      "people": 1,
-      "duration": 9,
-      "starters": [
-        "water",
-        "bread"
-      ],
-      "table": null,
-      "phone": "",
-      "address": "",
-      "id": 1
-    }
-  ]
+  "bookings": []
 }

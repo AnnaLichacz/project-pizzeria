@@ -5,8 +5,6 @@ class Home {
     const thisHome = this;
   
     thisHome.render(element);
-  
-  
   }
   
   render(element) {
@@ -17,7 +15,6 @@ class Home {
     thisHome.dom = {};
     thisHome.dom.wrapper = element;
     thisHome.dom.wrapper.innerHTML = generatedHTML;
-  
   }
 }
   

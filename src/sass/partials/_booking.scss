@@ -175,7 +175,9 @@
     }
     
     &.selected {
-      border-color: green;
+      border-color: rgb(0, 217, 0);
+      border-width: 2px;
+      border-style: solid;
     }
   }
   
